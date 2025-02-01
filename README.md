@@ -61,7 +61,6 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| uuid | [string](#string) |  |  |
 | token | [string](#string) |  |  |
 
 
