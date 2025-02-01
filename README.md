@@ -46,7 +46,7 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| qr | [string](#string) |  |  |
+| QR | [string](#string) |  |  |
 
 
 
