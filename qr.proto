@@ -17,8 +17,7 @@ message CreateQROut {
 }
 
 message VerifyQRIn {
-  string uuid = 1;
-  string token = 2;
+  string token = 1;
 }
 
 message VerifyQROut {
