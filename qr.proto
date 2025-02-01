@@ -13,7 +13,7 @@ message CreateQRIn {
 }
 
 message CreateQROut {
-  string qr = 1;
+  string QR = 1;
 }
 
 message VerifyQRIn {
