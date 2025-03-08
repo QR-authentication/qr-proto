@@ -8,12 +8,11 @@ service QRService {
 }
 
 message CreateQRIn {
-  string uuid = 1;
-  string ip = 2;
+  string ip = 1;
 }
 
 message CreateQROut {
-  string QR = 1;
+  string qr = 1;
 }
 
 message VerifyQRIn {

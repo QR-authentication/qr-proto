@@ -30,7 +30,6 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| uuid | [string](#string) |  |  |
 | ip | [string](#string) |  |  |
 
 
@@ -46,7 +45,7 @@
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| QR | [string](#string) |  |  |
+| qr | [string](#string) |  |  |
 
 
 
