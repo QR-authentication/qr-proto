@@ -11,6 +11,7 @@ import (
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
+	emptypb "google.golang.org/protobuf/types/known/emptypb"
 )
 
 // This is a compile-time assertion to ensure that this generated file
@@ -27,7 +28,7 @@ const (
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type QRServiceClient interface {
-	CreateQR(ctx context.Context, in *CreateQRIn, opts ...grpc.CallOption) (*CreateQROut, error)
+	CreateQR(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*CreateQROut, error)
 	VerifyQR(ctx context.Context, in *VerifyQRIn, opts ...grpc.CallOption) (*VerifyQROut, error)
 }
 
@@ -39,7 +40,7 @@ func NewQRServiceClient(cc grpc.ClientConnInterface) QRServiceClient {
 	return &qRServiceClient{cc}
 }
 
-func (c *qRServiceClient) CreateQR(ctx context.Context, in *CreateQRIn, opts ...grpc.CallOption) (*CreateQROut, error) {
+func (c *qRServiceClient) CreateQR(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*CreateQROut, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(CreateQROut)
 	err := c.cc.Invoke(ctx, QRService_CreateQR_FullMethodName, in, out, cOpts...)
@@ -63,7 +64,7 @@ func (c *qRServiceClient) VerifyQR(ctx context.Context, in *VerifyQRIn, opts ...
 // All implementations must embed UnimplementedQRServiceServer
 // for forward compatibility.
 type QRServiceServer interface {
-	CreateQR(context.Context, *CreateQRIn) (*CreateQROut, error)
+	CreateQR(context.Context, *emptypb.Empty) (*CreateQROut, error)
 	VerifyQR(context.Context, *VerifyQRIn) (*VerifyQROut, error)
 	mustEmbedUnimplementedQRServiceServer()
 }
@@ -75,7 +76,7 @@ type QRServiceServer interface {
 // pointer dereference when methods are called.
 type UnimplementedQRServiceServer struct{}
 
-func (UnimplementedQRServiceServer) CreateQR(context.Context, *CreateQRIn) (*CreateQROut, error) {
+func (UnimplementedQRServiceServer) CreateQR(context.Context, *emptypb.Empty) (*CreateQROut, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateQR not implemented")
 }
 func (UnimplementedQRServiceServer) VerifyQR(context.Context, *VerifyQRIn) (*VerifyQROut, error) {
@@ -103,7 +104,7 @@ func RegisterQRServiceServer(s grpc.ServiceRegistrar, srv QRServiceServer) {
 }
 
 func _QRService_CreateQR_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CreateQRIn)
+	in := new(emptypb.Empty)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -115,7 +116,7 @@ func _QRService_CreateQR_Handler(srv interface{}, ctx context.Context, dec func(
 		FullMethod: QRService_CreateQR_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(QRServiceServer).CreateQR(ctx, req.(*CreateQRIn))
+		return srv.(QRServiceServer).CreateQR(ctx, req.(*emptypb.Empty))
 	}
 	return interceptor(ctx, in, info, handler)
 }

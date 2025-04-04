@@ -2,13 +2,11 @@ syntax = "proto3";
 
 option go_package = "./qr-proto";
 
-service QRService {
-  rpc CreateQR(CreateQRIn) returns (CreateQROut){};
-  rpc VerifyQR(VerifyQRIn) returns (VerifyQROut){};
-}
+import  "google/protobuf/empty.proto";
 
-message CreateQRIn {
-  string ip = 1;
+service QRService {
+  rpc CreateQR(google.protobuf.Empty) returns (CreateQROut){};
+  rpc VerifyQR(VerifyQRIn) returns (VerifyQROut){};
 }
 
 message CreateQROut {

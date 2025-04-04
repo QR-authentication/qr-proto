@@ -4,7 +4,6 @@
 ## Table of Contents
 
 - [qr.proto](#qr-proto)
-    - [CreateQRIn](#-CreateQRIn)
     - [CreateQROut](#-CreateQROut)
     - [VerifyQRIn](#-VerifyQRIn)
     - [VerifyQROut](#-VerifyQROut)
@@ -19,21 +18,6 @@
 <p align="right"><a href="#top">Top</a></p>
 
 ## qr.proto
-
-
-
-<a name="-CreateQRIn"></a>
-
-### CreateQRIn
-
-
-
-| Field | Type | Label | Description |
-| ----- | ---- | ----- | ----------- |
-| ip | [string](#string) |  |  |
-
-
-
 
 
 
@@ -95,7 +79,7 @@
 
 | Method Name | Request Type | Response Type | Description |
 | ----------- | ------------ | ------------- | ------------|
-| CreateQR | [.CreateQRIn](#CreateQRIn) | [.CreateQROut](#CreateQROut) |  |
+| CreateQR | [.google.protobuf.Empty](#google-protobuf-Empty) | [.CreateQROut](#CreateQROut) |  |
 | VerifyQR | [.VerifyQRIn](#VerifyQRIn) | [.VerifyQROut](#VerifyQROut) |  |
 
  
