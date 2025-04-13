@@ -15,6 +15,7 @@ message CreateQROut {
 
 message VerifyQRIn {
   string token = 1;
+  string type = 2;
 }
 
 message VerifyQROut {
