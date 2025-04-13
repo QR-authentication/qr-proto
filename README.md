@@ -45,7 +45,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | token | [string](#string) |  |  |
-| type | [string](#string) |  |  |
+| action | [string](#string) |  |  |
 
 
 
